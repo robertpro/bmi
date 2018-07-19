@@ -33,3 +33,8 @@ class BmiModel(models.Model):
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.IntegerField()
+
+    def get_category(self):
+        for number, human_readable in self.CATEGORY_CHOICES:
+            if number == self.category:
+                return human_readable
