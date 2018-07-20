@@ -2,7 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
 
-from bmi.models import BmiModel
+from .models import BmiModel
 from .forms import SignUpForm, BmiForm
 
 # Create your views here.
